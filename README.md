@@ -21,8 +21,8 @@ You can configure you config with the following input variables:
 
 | Name                 | Description                       | Default       |
 |----------------------|-----------------------------------|---------------|
-| `cluster-name`       | The name of your EKS Cluster      | `my-cluster`  |
-| `aws-region`         | The AWS Region to deploy EKS      | `us-west-2`   |
+| `cluster-name`       | The name of your EKS Cluster      | `EKS_TEST`  |
+| `aws-region`         | The AWS Region to deploy EKS      | `us-east-1`   |
 | `k8s-version`        | The desired K8s version to launch | `1.11`        |
 | `node-instance-type` | Worker Node EC2 instance type     | `m4.large`    |
 | `desired-capacity`   | Autoscaling Desired node capacity | `2`           |

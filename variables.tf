@@ -13,7 +13,7 @@ variable "aws-region" {
 }
 
 variable "k8s-version" {
-  default     = "1.15"
+  default     = "1.11"
   type        = "string"
   description = "Required K8s version"
 }
