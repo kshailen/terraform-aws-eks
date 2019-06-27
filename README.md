@@ -152,12 +152,31 @@ aws-iam-authenticator -i EKS_TEST token | jq .status.token
 ### Set up Visualiser
 Fork the repository and deploy the visualizer on kubernetes
 ```bash 
-git clone  https://github.com/schoolofdevops/kube-ops-view
+git clone  https://github.com/kshailen/kube-ops-view.git
 kubectl apply -f kube-ops-view/deploy/
 ```
+### Open Visualiser UI
+Check if kubeproxy is running or not using following 
+
+```bash
+ps -ef | grep -i kubectl | grep proxy
+```
+It will show output like below
+```
+Shailendras-MacBook-Pro:terraform-aws-eks shaikuma$ ps -ef | grep -i kubectl | grep proxy
+  501 39202 21611   0  3:41PM ttys002    0:00.28 kubectl proxy --address 0.0.0.0 --accept-hosts 
+Shailendras-MacBook-Pro:terraform-aws-eks shaikuma$ 
+```
+It's proxy is not running then run it using following
+```bash
+kubectl proxy --address 0.0.0.0 --accept-hosts '.*' &
+```
+Now direct your browser to http://localhost:8001/api/v1/namespaces/default/services/kube-ops-view/proxy/
+
+You could read further about it [at this link.](https://kubernetes-operational-view.readthedocs.io/en/latest/)
+[Kubernetes Operational View is also available as a Helm Chart](https://kubeapps.com/charts/stable/kube-ops-view)
 
 
-
-### Sample Support Page from aws
+### AWS Support Page:
 [https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/](https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/)
 
