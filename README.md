@@ -30,7 +30,6 @@ You can configure you config with the following input variables:
 | `min-size`           | Autoscaling Minimum node capacity | `1`           |
 | `vpc-subnet-cidr`    | Subnet CIDR                       | `10.0.0.0/16` |
 
-
 > You can create a file called terraform.tfvars in the project root, to place your variables if you would like to over-ride the defaults.
 
 ## How to use this example
@@ -39,8 +38,6 @@ You can configure you config with the following input variables:
 git clone https://github.com/kshailen/terraform-aws-eks.git
 cd terraform-aws-eks
 ```
-
-
 ### IAM
 
 The AWS credentials must be associated with a user having at least the following AWS managed IAM policies
@@ -151,6 +148,15 @@ aws-iam-authenticator -i EKS_TEST token | jq .status.token
 ### Log in to dashboard 
 [http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login ](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login ) 
 ![login screen](https://github.com/kshailen/terraform-aws-eks/blob/master/loginscreen.png "Dashbboard Login screen")
+
+### Set up Visualiser
+Fork the repository and deploy the visualizer on kubernetes
+```bash 
+git clone  https://github.com/schoolofdevops/kube-ops-view
+kubectl apply -f kube-ops-view/deploy/
+```
+
+
 
 ### Sample Support Page from aws
 [https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/](https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/)
