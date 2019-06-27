@@ -172,9 +172,13 @@ It's proxy is not running then run it using following
 kubectl proxy --address 0.0.0.0 --accept-hosts '.*' &
 ```
 Now direct your browser to http://localhost:8001/api/v1/namespaces/default/services/kube-ops-view/proxy/
+It gives you view as below.
+
+![lkube-ops-view-image](https://github.com/kshailen/terraform-aws-eks/blob/master/kube-ops-view-image.png "kops view")
 
 You could read further about it [at this link.](https://kubernetes-operational-view.readthedocs.io/en/latest/)
 [Kubernetes Operational View is also available as a Helm Chart](https://kubeapps.com/charts/stable/kube-ops-view)
+
 
 
 ### AWS Support Page:
