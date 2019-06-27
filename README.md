@@ -184,4 +184,5 @@ You could read further about it [at this link.](https://kubernetes-operational-v
 
 ### AWS Support Page:
 [https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/](https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/)
+[EKS User Guide ](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
 
