@@ -177,6 +177,7 @@ It gives you view as below.
 ![lkube-ops-view-image](https://github.com/kshailen/terraform-aws-eks/blob/master/kube-ops-view-image.png "kops view")
 
 You could read further about it [at this link.](https://kubernetes-operational-view.readthedocs.io/en/latest/)
+
 [Kubernetes Operational View is also available as a Helm Chart](https://kubeapps.com/charts/stable/kube-ops-view)
 
 
