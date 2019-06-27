@@ -122,3 +122,38 @@ You can destroy this cluster entirely by running:
 terraform plan -destroy
 terraform destroy  --force
 ```
+
+### Deploying the Kubernetes dashboard
+``` bash
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
+```
+### Create an administrative account and cluster role binding
+```bash
+kubectl apply -f eks-admin-service-account.yaml
+kubectl apply -f eks-admin-cluster-role-binding.yaml
+```
+
+#### Installing Heapster and InfluxDB
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/heapster.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/influxdb.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/rbac/heapster-rbac.yaml
+```
+
+### Start proxy to open kubernetes Dashoard UI
+```bash
+kubectl proxy --address 0.0.0.0 --accept-hosts '.*' &
+```
+###Get a token
+```bash
+aws-iam-authenticator -i EKS_TEST token | jq .status.token
+```
+### Log in to dashboard 
+[Dashboard login ](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login )
+
+Inline-style: 
+![login screen](https://github.com/kshailen/terraform-aws-eks/blob/master/loginscreen.png "Dashbboard Login screen")
+
+### Sample Support Page
+[https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/](https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/)
+
