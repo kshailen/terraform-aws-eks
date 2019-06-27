@@ -144,16 +144,14 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/heapster/master/de
 ```bash
 kubectl proxy --address 0.0.0.0 --accept-hosts '.*' &
 ```
-###Get a token
+### Get a token
 ```bash
 aws-iam-authenticator -i EKS_TEST token | jq .status.token
 ```
 ### Log in to dashboard 
-[Dashboard login ](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login )
-
-Inline-style: 
+[http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login ](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login ) 
 ![login screen](https://github.com/kshailen/terraform-aws-eks/blob/master/loginscreen.png "Dashbboard Login screen")
 
-### Sample Support Page
+### Sample Support Page from aws
 [https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/](https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/)
 
