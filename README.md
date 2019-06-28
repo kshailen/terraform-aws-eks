@@ -181,9 +181,14 @@ You could read further about it [at this link.](https://kubernetes-operational-v
 [Kubernetes Operational View is also available as a Helm Chart](https://kubeapps.com/charts/stable/kube-ops-view)
 
 
+### Logging into ecr
+```bash
+$(aws ecr get-login --no-include-email --region us-east-1)
+```
 
 ### AWS Support Page:
 [https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/](https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-kubernetes-dashboard/)
 
 [EKS User Guide ](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
 
+[EKS WorkShop](https://eksworkshop.com/)
