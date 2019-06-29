@@ -17,7 +17,14 @@ shailendras-mbp:terraform-aws-eks shaikuma$
 ${terraform.workspace}
 ```
 
+### * refresents current namespace
+```hcl
+shailendras-mbp:terraform-aws-eks shaikuma$ terraform workspace list
+  default
+* dev
 
+shailendras-mbp:terraform-aws-eks shaikuma$ 
+```
 
 ### S3 Backend:
 [https://www.terraform.io/docs/backends/types/s3.html](https://www.terraform.io/docs/backends/types/s3.html)
@@ -25,3 +32,4 @@ ${terraform.workspace}
 
 ### Backend S3 and Workspace Example
 [https://dzone.com/articles/manage-multiple-environments-with-terraform-worksp](https://dzone.com/articles/manage-multiple-environments-with-terraform-worksp)
+[https://scraly.github.io/posts/manage-multiple-environments-with-terraform-workspaces/](https://scraly.github.io/posts/manage-multiple-environments-with-terraform-workspaces/)
