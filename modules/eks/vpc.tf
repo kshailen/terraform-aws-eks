@@ -1,11 +1,5 @@
 #
 # VPC Resources
-
-variable cluster-name {}
-
-variable "aws-region" {}
-variable "vpc-subnet-cidr" {}
-
 resource "aws_vpc" "eks" {
   cidr_block = "${var.vpc-subnet-cidr}"
 
@@ -35,7 +29,7 @@ resource "aws_subnet" "eks" {
 resource "aws_internet_gateway" "eks" {
   vpc_id = "${aws_vpc.eks.id}"
 
-  tags {
+  tags = {
     Name = "${var.cluster-name}-eks-igw"
   }
 }
