@@ -272,11 +272,11 @@ where:
 
 You have successfully set your Docker credentials in the cluster as a Secret called `regcred`.
 
-{{< note >}}
+
 Typing secrets on the command line may store them in your shell history unprotected, and
 those secrets might also be visible to other users on your PC during the time that
 `kubectl` is running.
-{{< /note >}}
+
 
 
 ## Inspecting the Secret `regcred`
