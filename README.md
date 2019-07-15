@@ -345,3 +345,5 @@ $(aws ecr get-login --no-include-email --region us-east-1)
 [EKS User Guide ](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
 
 [EKS WorkShop](https://eksworkshop.com/)
+
+[How to setup ALB ingress Controller](https://aws.amazon.com/blogs/opensource/kubernetes-ingress-aws-alb-ingress-controller/)
